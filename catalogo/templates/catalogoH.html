@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        {% block content %}
+        <main class='container'>
+            <div class='row'>
+                <h1 class='text-center'>Agregar paciente</h1>
+                <div class='col-md-4 offset-md-4'>
+                <form action='/catalogo/' method='POST' class='card card-body text-center'>
+                    {% csrf_token %}
+                    
+                        <div class='mb-3'>
+                            <label for='nombre'>Nombre</label>
+                            <input type='text' name='nombre' id='nombre' class='form-control'>
+                            
+                            <label for='apellidos'>Apellidos</label>
+                            <input type='text' name='apellidos' id='apellidos' class='form-control'>
+                            
+                            <label for='direccion'>Dirección</label>
+                            <input type='text' name='direccion' id='direccion' class='form-control'>
+                            
+                            <label for='ciudad'>Ciudad</label>
+                            <input type='text' name='ciudad' id='ciudad' class='form-control'>
+                            
+                            <label for='telefono'>Teléfono</label>
+                            <input type='text' name='telefono' id='telefono' class='form-control'>  
+                        </div>
+                    </div>
+                    <div class='col-md-4 offset-md-4'>
+                        <label for='historial_clinico'>Historial clínico</label>
+                        <textarea rows='13' cols="33" name='historial_clinico' id='historial_clinico' class='form-control'></textarea>
+                        <button type='submit'>
+                            Registrar
+                        </button>
+                    
+                    
+                </form>
+            </div>
+            </div>
+        </main>
+        {% endblock content %}
+    </body>
+</html>
+
+nombre= models.CharField(max_length=50)
+    apellidos=models.CharField(max_length=100)
+    direccion=models.CharField(max_length=150)
+    ciudad=models.CharField(max_length=50)
+    telefono=models.CharField(max_length=20)
+    historial_clinico=models.TextField()

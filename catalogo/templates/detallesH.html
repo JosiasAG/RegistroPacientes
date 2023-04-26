@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+        <h1>Detalles del articulo</h1>
+        <ul>
+            {% for articulo in catalogo %}
+                <li>{{articulo}}</li>
+            {% endfor %}
+        </ul>
+        {% endblock content %}

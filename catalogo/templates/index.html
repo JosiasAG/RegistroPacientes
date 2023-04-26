@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        {% block content %}
+        <div>
+            <h1 class='text-center'>Sistema de registro y gestión de pacientes</h1>
+        </div>
+        
+        <div class='text-center'>
+            {% if user.is_authenticated %}
+            {% else %}
+            <a class="btn btn-secondary" href='/registro/'>
+                Registrar
+            </a>
+            <a class="btn btn-dark" href='/ingreso/'>
+                Ingresar
+            </a>
+            {% endif %}
+        </div>
+        {% endblock content %}
+    </body>
+</html>

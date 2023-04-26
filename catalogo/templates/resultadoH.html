@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        {% block content %}
+        <main class='container'>
+            <div class='row'>
+                <div class='col-md-4 offset-md-4'>
+                    <h1 class='text-center'>Resultados</h1>
+                    <ul class='list-group' style="list-style: none;">
+                        <li>Nombre: {{paci.nombre}} {{paci.apellidos}}</li>
+                        <li>Direccion: {{paci.direccion}}</li>
+                        <li>Ciudad: {{paci.ciudad}}</li>
+                        <li>Telefono: {{paci.telefono}}</li>
+                        <li>Ingreso: {{paci.ingreso}}</li>
+                        <li>Fecha de alta: {{paci.alta}}</li>
+                        <li>Historial clínico: {{paci.historial_clinico}}</li>
+                    </ul>
+                </div>
+            </div>
+        </main>
+       {% endblock content %}
+    </body>
+</html>
