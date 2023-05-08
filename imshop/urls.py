@@ -20,7 +20,7 @@ from catalogo import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('inicio/', views.inicio, name='inicio'),
+    path('', views.inicio, name='inicio'),
     path('registro/', views.registrar, name='registro'),
     path('ingreso/', views.ingresar, name='ingreso'),
     path('catalogo/', views.catalogoT, name='catalogo'),
